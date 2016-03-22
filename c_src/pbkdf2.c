@@ -23,7 +23,6 @@
 #include <string.h>
 #include <stdint.h>
 #include <stdlib.h>
-#include <util.h>
 
 #include "sha1.h"
 #include "explicit_bzero.h"
