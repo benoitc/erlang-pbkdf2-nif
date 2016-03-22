@@ -7,7 +7,7 @@
 
 init() ->
 	SoName = filename:join(
-		case code:priv_dir(enacl) of
+		case code:priv_dir(pbkdf2) of
 		    {error, bad_name} ->
 		        filename:join(filename:dirname(filename:dirname(code:which(?MODULE))), "priv");
 		    Dir ->
