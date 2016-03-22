@@ -1,0 +1,15 @@
+{application, pbkdf2,
+ [{description, "PBKDF2 NIF implementation"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {maintainers, ["Benoit Chesneau"]},
+  {licenses, ["MIT"]},
+  {links, [{"Github", "https://github.com/barrel-db/erlang-pbkdf2-nif"}]}
+ ]}.
