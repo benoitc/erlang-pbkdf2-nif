@@ -9,6 +9,7 @@
   {env,[]},
   {modules, []},
 
+  {pkg_name, pbkdf2_nif},
   {maintainers, ["Benoit Chesneau"]},
   {licenses, ["MIT"]},
   {links, [{"Github", "https://github.com/barrel-db/erlang-pbkdf2-nif"}]}
