@@ -29,6 +29,10 @@
 
 #define	MINIMUM(a,b) (((a) < (b)) ? (a) : (b))
 
+#ifndef ERL_NIF_DIRTY_SCHEDULER_SUPPORT
+# error Requires dirty schedulers
+#endif
+
 /*
  * HMAC-SHA-1 (from RFC 2202).
  */
@@ -175,7 +179,7 @@ ERL_NIF_TERM pbkdf2(ErlNifEnv *env, int argc, ERL_NIF_TERM const argv[])
 static ErlNifFunc
 nif_funcs[] =
 {
-    {"pbkdf2", 4, pbkdf2}
+    {"pbkdf2", 4, pbkdf2, ERL_NIF_DIRTY_JOB_CPU_BOUND}
 };
 
 ERL_NIF_INIT(pbkdf2, nif_funcs, enif_pbkdf2_load, NULL, NULL, NULL);
